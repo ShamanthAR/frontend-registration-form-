@@ -1,0 +1,228 @@
+package mini;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+import jdk.nashorn.internal.objects.annotations.Getter;
+
+public class initial implements ActionListener{
+	
+	JFrame F=new JFrame("REGISTRATION FORM");
+	JFrame Fr=new JFrame("Login");
+	JFrame Fr1=new JFrame("Welcome");
+	JLabel L1=new JLabel("REGISTRATION FORM");
+	JLabel L2=new JLabel("First Name");
+	JLabel L3=new JLabel("Last Name");
+	JLabel L4=new JLabel("Email");
+	JLabel L5=new JLabel("Gender");
+	JLabel L6=new JLabel("Password");
+    JLabel L7=new JLabel("Retype-password"); 
+	JPasswordField PF=new JPasswordField();
+	JPasswordField P1F=new JPasswordField();
+	JButton B1=new JButton("Register");
+	JButton B2=new JButton("Clear");
+	JButton B3=new JButton("Login");
+	JTextField F1=new JTextField();
+	JTextField F2=new JTextField();
+	JTextField F3=new JTextField();
+	JRadioButton R1=new JRadioButton("Male");
+	JRadioButton R2=new JRadioButton("Female");
+	JLabel L8=new JLabel("____________________________________________");
+	JLabel L9=new JLabel("Have you already registered?");
+	JLabel LP1=new JLabel("username");
+	JLabel LP2=new JLabel("password");
+	JLabel Lp3=new JLabel("*Email itself will be your Username");
+	
+	
+	
+	JLabel lp1=new JLabel("Login.");
+	JLabel lp2=new JLabel("Username");
+	JLabel lp3=new JLabel("Password");
+	JTextField lpf1=new JTextField();
+	JPasswordField lpf2=new JPasswordField();
+	JButton lpb1=new JButton("Reset");
+	JButton lpb2=new JButton("Login");
+	JButton lpb3=new JButton("Back");
+	
+	
+	JLabel wl=new JLabel();
+	JLabel wl2=new JLabel("Welcome");
+	JLabel wl3=new JLabel("you have succesfully registered for online examination.");
+	
+	
+	@SuppressWarnings("static-access")
+	public  void register()
+	{
+		F=new JFrame();
+		F.setTitle("REGISTRATION FORM");
+		F.setLayout(new BorderLayout());
+		F.setContentPane(new JLabel(new ImageIcon("C:\\Users\\shamanth a r\\Downloads\\projimage.jpg")));
+		F.setLayout(null);
+		F.setBounds(50, 50, 500, 600);
+		Fr1.setTitle("Welcome");
+		Fr1.setBounds(50, 50, 500, 600);
+		Fr1.setLayout(new BorderLayout());
+		Fr1.setContentPane(new JLabel(new ImageIcon("C:\\\\Users\\\\shamanth a r\\\\Downloads\\\\projimage.jpg")));
+		Fr1.setLayout(null);
+		wl2.setBounds(10, 10,100, 50);
+		wl2.setForeground(Color.DARK_GRAY);
+		wl2.setFont(new Font(Font.SANS_SERIF,Font.BOLD,9));
+		wl.setFont(new Font(Font.SANS_SERIF,Font.BOLD,9));
+		wl.setBounds(62, 10, 50, 40);
+		wl3.setBounds(115, 10, 250, 30);
+		Fr1.add(wl);
+		Fr1.add(wl2);
+		Fr1.add(wl3);
+		
+		F.add(L1);
+		F.add(L2);
+		F.add(L3);
+		F.add(L4);
+		F.add(L5);
+		F.add(L6);
+		F.add(L7);
+		F.add(F1);
+		F.add(F2);
+		F.add(F3);
+		F.add(R1);
+		F.add(R2);
+		F.add(PF);
+		F.add(P1F);
+		F.add(B1);
+		F.add(B2);
+		F.add(L8);
+		F.add(L9);
+		F.add(B3);
+		F.add(Lp3);
+		F.setVisible(true);
+	}
+	public void components()
+	{
+		L1.setBounds(170, 10, 250,50);
+		L1.setFont(new Font(Font.SANS_SERIF,Font.BOLD,15));
+		L1.setForeground(Color.DARK_GRAY);
+		L2.setBounds(100, 60, 70, 40);
+		L2.setFont(new Font(Font.SANS_SERIF,Font.BOLD,12));
+		F1.setBounds(210, 60, 150, 30);
+		L3.setBounds(100, 110, 70, 40);
+		L3.setFont(new Font(Font.SANS_SERIF,Font.BOLD,12));
+		F2.setBounds(210, 110, 150, 30);
+		L4.setBounds(100, 160, 70, 40);
+		L4.setFont(new Font(Font.SANS_SERIF,Font.BOLD,12));
+		F3.setBounds(210, 160, 150, 30);
+		L5.setBounds(100, 210, 70, 40);
+		L5.setFont(new Font(Font.SANS_SERIF,Font.BOLD,12));
+		R1.setBounds(210, 210, 50, 30);
+		R1.setFont(new Font(Font.SANS_SERIF,Font.BOLD,9));
+		R2.setBounds(290, 210,70, 30);
+		R2.setFont(new Font(Font.SANS_SERIF,Font.BOLD,9));
+		L6.setBounds(100, 260, 70, 40);
+		L6.setFont(new Font(Font.SANS_SERIF,Font.BOLD,12));
+		L7.setBounds(100, 310, 100, 40);
+		L7.setFont(new Font(Font.SANS_SERIF,Font.BOLD,12));
+		PF.setBounds(210, 260, 150, 30);
+		P1F.setBounds(210, 310, 150, 30);
+		B1.setBounds(210, 360, 70, 30);
+		B1.setFont(new Font(Font.SANS_SERIF,Font.BOLD,8));
+		B1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				Fr1.setVisible(true);
+				F.setVisible(false);
+			}
+			
+		});
+		B2.setBounds(290, 360, 70, 30);
+		B2.setFont(new Font(Font.SANS_SERIF,Font.BOLD,9));
+		B2.addActionListener(new ActionListener()
+				{
+			public void actionPerformed(ActionEvent ae)
+			{
+				F1.setText("");
+				F2.setText("");
+				F3.setText("");
+				PF.setText("");
+				P1F.setText("");
+			}
+			
+				});
+		L8.setBounds(100, 400, 600, 20);
+		L9.setBounds(100, 430, 180, 30);
+		B3.setBounds(290, 430, 70, 30);
+		B3.setFont(new Font(Font.SANS_SERIF,Font.BOLD,9));
+		B3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				login();
+			}
+		});
+		Lp3.setBounds(20, 540, 200, 10);
+		Lp3.setForeground(Color.DARK_GRAY);
+		lpb3.setBounds(20, 10, 70, 20);
+		lpb3.setFont(new Font(Font.SANS_SERIF,Font.BOLD,7));
+		lpb3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				register();
+				Fr.setVisible(false);
+			}
+		});
+		lp1.setBounds(230, 10, 100, 30);
+		lp1.setFont(new Font(Font.SANS_SERIF,Font.BOLD,20));
+		lp1.setForeground(Color.DARK_GRAY);
+		lp2.setBounds(100, 100, 70, 30);
+		lp2.setFont(new Font(Font.SANS_SERIF,Font.BOLD,13));
+		lp3.setBounds(100, 150, 70, 30);
+		lp3.setFont(new Font(Font.SANS_SERIF,Font.BOLD,13));
+		lpf1.setBounds(190, 100, 160, 30);
+		lpf2.setBounds(190, 150, 160, 30);
+		lpb1.setBounds(190,200 , 70, 30);
+		lpb1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				lpf1.setText("");
+				lpf2.setText("");
+			}
+		});
+		lpb2.setBounds(280,200 , 70, 30);
+		lpb2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				Fr1.setVisible(true);
+				F.setVisible(false);
+				Fr.setVisible(false);
+			}
+		});
+		
+		
+	}
+	
+	
+	public void login()
+	{
+		Fr.setTitle("Login");
+		Fr.setLayout(new BorderLayout());
+		Fr.setContentPane(new JLabel(new ImageIcon("C:\\\\Users\\\\shamanth a r\\\\Downloads\\\\projimage.jpg")));
+		Fr.setLayout(null);
+		//Fr.setDefaultCloseOperation(EXIT_ON_CLICK);
+		Fr.setBounds(100, 100, 500, 600);
+		
+		Fr.add(lp1);
+		Fr.add(lp2);
+		Fr.add(lp3);
+		Fr.add(lpf1);
+		Fr.add(lpf2);
+		Fr.add(lpb1);
+		Fr.add(lpb2);
+		Fr.add(lpb3);
+		Fr.setVisible(true);
+		F.setVisible(false);
+	}
+   initial()
+   {
+	   register();
+	   components();
+	  // adding();
+	  
+	   
+   }
+   public static void main(String args[]){
+	   new initial();
+   }
+
+}
