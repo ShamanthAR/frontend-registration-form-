@@ -223,6 +223,7 @@ public class initial implements ActionListener{
    }
    public static void main(String args[]){
 	   new initial();
+	   System.out.println("Hello World")
    }
 
 }
